@@ -1,0 +1,30 @@
+{% extends 'front/front_base.html' %}
+{#{% from 'macros.html' import form_field %}#}
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='front/css/reg_log.css') }}">
+{% endblock %}
+{% block content %}
+    <form method="post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        {{ form.csrf_token }}
+        <div class="mb-3">
+            <label for="DL_ID" class="form-label">工号</label>
+            {{ form.DL_ID }}
+            {#            <div id="emailHelp" class="form-text">We'll never share your username with anyone else.</div>#}
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">密码</label>
+            {{ form.password }}
+        </div>
+        {% if message %}
+            <p class="text-danger" style="text-align:center">{{ message }}</p>
+        {% endif %}
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" name="remember" value="1">
+            <label class="form-check-label" for="exampleCheck1">记住我</label>
+        </div>
+        {{ form.submit }}<br>
+        <a href="{{ url_for('front.reg') }}" class="text-decoration-none"><small>没有账号？点此注册</small></a>
+    </form>
+{% endblock %}

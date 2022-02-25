@@ -1,0 +1,17 @@
+.form-control{
+    margin:0 !important;
+}
+.justify-content-center{
+    width: 50%;
+    margin: auto;
+}
+.main{
+    height: 400px;
+    display:flex;
+}
+.container-fluid{
+    align-self:center;
+}
+.search-bar{
+    height: 100px;
+}

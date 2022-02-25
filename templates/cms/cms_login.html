@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/signin/">
+
+    <title>登录 11:40 CMS管理系统</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.30/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.30/examples/signin/signin.css"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <form class="form-signin" method="post">
+        <h2 class="form-signin-heading">请登录</h2>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <label for="inputDL_ID" class="sr-only">工号</label>
+        <input type="text" id="inputDL_ID" class="form-control" placeholder="工号" name="DL_ID" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="密码" name="password" required>
+        {% if message %}
+            <p class="text-danger" style="text-align:center">{{ message }}</p>
+        {% endif %}
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="1" name="remember"> 记住我
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+    </form>
+
+
+</div> <!-- /container -->
+
+
+</body>
+</html>

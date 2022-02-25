@@ -1,0 +1,43 @@
+/*.main {*/
+/*    height: auto;*/
+/*    margin: auto;*/
+/*    padding-top: 70px;*/
+/*}*/
+
+h1,h3,h5,h2 {
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+
+img {
+    max-width: 500px;
+    max-height: 500px ;
+    margin: auto;
+}
+
+/*hea1der h2:nth-child(2) {*/
+/*    padding: 60px;*/
+/*}*/
+
+/*a.post {*/
+
+/*    width: 50%;*/
+/*    margin: auto;*/
+/*}*/
+
+/*div .job {*/
+/*    width: 50%;*/
+/*    margin: auto;*/
+/*}*/
+
+/*div .job a {*/
+/*    display: inline-block;*/
+/*    font-size: 20px;*/
+/*    margin-top: 10px;*/
+/*    padding-top: 10px;*/
+/*    font-weight: 700;*/
+/*}*/

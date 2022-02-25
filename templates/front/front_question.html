@@ -1,0 +1,70 @@
+{% extends 'front/front_index.html' %}
+{#{% from 'macros.html' import form_field %}#}
+{% from 'common/_macros.html' import render_field %}
+{% block styles %}
+    {#    {{ super() }}#}
+    {#    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='front/css/journal.css') }}">#}
+{% endblock %}
+{% block content %}
+{#    {% for message in get_flashed_messages() %}#}
+{#        <div class="alert alert-primary text-center" role="alert">{{ message }}</div>#}
+{#    {% endfor %}#}
+{#    <div class="main">#}
+{#        <form action="" method="post">#}
+{#            <div class="mx-auto clearfix" style="max-width:80%">#}
+{#                <div class="clearfix">#}
+{#                    {{ form.csrf_token }}#}
+{#                    {{ render_field(form.service_type,onchange="Select('service_type','#service_classification','/write/',csrf)") }}#}
+                    {#            {{ form.service_type }}#}
+{#                    {{ form.start_time.label }}#}
+{#                    {{ form.start_time }}#}
+{#                </div>#}
+{#                <div class="clearfix">#}
+{#                    {{ form.csrf_token }}#}
+{#                    {{ form.service_classification.label }}#}
+{#                    {{ form.service_classification }}#}
+                    {#                {{ form.end_hours.label }}#}
+                    {#                {{ form.end_hours }}#}
+{#                    {{ form.end_time.label }}#}
+{#                    {{ form.end_time }}#}
+{#                    {{ form.hours.label }}#}
+{#                    {{ form.hours }}#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="mx-auto clearfix" style="max-width:80%;height: 600px">#}
+{#                <div class="input-group h-25">#}
+{#                    <span class="input-group-text">问题描述</span>#}
+{#                    {{ form.problem_description }}#}
+{#                </div>#}
+{#                <br>#}
+{#                <div class="input-group h-25">#}
+{#                    <span class="input-group-text">原因分析</span>#}
+{#                    {{ form.cause_analysis }}#}
+{#                </div>#}
+{#                <br>#}
+{#                <div class="input-group h-25">#}
+{#                    <span class="input-group-text">处理过程</span>#}
+{#                    {{ form.process1 }}#}
+{#                </div>#}
+{#                <br>#}
+{#                <div class="input-group h-25">#}
+{#                    <span class="input-group-text">处理结果</span>#}
+{#                    {{ form.result }}#}
+{#                </div>#}
+{#            </div>#}
+{#            <br>#}
+{#            <div class="mx-auto clearfix" style="max-width:0;margin: 70px">#}
+{#                {{ form.submit }}#}
+{#            </div>#}
+{#        </form>#}
+{#    </div>#}
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript">
+        var school_url = "{{ url_for('front.write') }}";
+        var csrf = "{{ csrf_token() }}";
+    </script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='front/js/script.js') }}"
+            charset="UTF-8"></script>
+{% endblock %}

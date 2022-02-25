@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import qux %}
+{% from 'macros.html' import form_field %}
+
+{% block styles %}
+    {{ super() }}
+    {#    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">#}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/table.css') }}">
+{% endblock %}
+
+{% block toolbar %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <form method="post" class="row g-3">
+            {{ form.csrf_token }}
+            {#        <div class="col-auto">#}
+            {#            <label for="db_name" class="visually-hidden">数据库</label>#}
+            {#        </div>#}
+            <div class="col-auto">
+                <label for="db_name" class="visually-hidden">数据库</label>
+                {{ form.db_name }}
+            </div>
+            {#        <div class="col-auto">#}
+            {#            <label for="staticEmail2" class="visually-hidden">表</label>#}
+            {#        </div>#}
+            <div class="col-auto">
+                <label for="table_name" class="visually-hidden">表</label>
+                {#            <input type="password" class="form-control" id="inputPassword2" placeholder="Password">#}
+                {{ form.table_name }}
+            </div>
+            <div class="col-auto">
+                {{ form.search }}
+            </div>
+            <div class="col-auto">
+                {{ form.save }}
+            </div>
+        </form>
+    </div>
+    <div class="s2 clearf">
+        <div class="container">
+            <table>
+                <thead>
+                <tr>
+                    {% for i in labels %}
+                        <td>{{ i }}</td>
+                    {% endfor %}
+                </tr>
+                </thead>
+                <tbody>
+                {% for i in content %}
+                    <tr>
+                        {% for j in i %}
+                            <td>{{ j }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            {#            {% for i in content %}#}
+            {#                <td>{{ i }}</td><br>#}
+            {#            {% endfor %}#}
+        </div>
+    </div>
+{% endblock %}

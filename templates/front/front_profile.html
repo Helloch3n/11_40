@@ -1,0 +1,29 @@
+{% extends 'front/front_user_base.html' %}
+
+{% block content %}
+    {% set user = g.front_user %}
+    <table class="table table-bordered">
+        <tbody>
+        <tr>
+            <td>用户名:</td>
+            <td>{{ user.username }}</td>
+        </tr>
+        <tr>
+            <td>工号:</td>
+            <td>{{ user.DL_ID }}</td>
+        </tr>
+        <tr>
+            <td>角色:</td>
+            <td>暂未开放</td>
+        </tr>
+        <tr>
+            <td>权限:</td>
+            <td>暂未开放</td>
+        </tr>
+        <tr>
+            <td>加入时间:</td>
+            <td>{{ user.join_time }}</td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}

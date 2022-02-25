@@ -1,0 +1,57 @@
+#service_type, #start_time, #service_classification, #end_time {
+    width: 15%;
+    /*float: left;*/
+    margin: 10px 5px;
+}
+
+/*.content {*/
+/*    text-align: center;*/
+/*}*/
+
+/*.description {*/
+/*    height: 200px;*/
+/*}*/
+
+/*.description label {*/
+/*    float: right;*/
+/*    margin: 5px;*/
+/*}*/
+
+/*textarea {*/
+/*    float: left;*/
+/*    height: 200px;*/
+/*    width: 60%;*/
+/*    margin: 5px 0;*/
+/*}*/
+
+/*.container{*/
+/*    width: 200px;*/
+/*}*/
+/*.slt {*/
+/*    margin: auto;*/
+/*    width: 70%;*/
+/*}*/
+
+/*.slt label {*/
+/*    padding: 5px;*/
+/*    margin: 10px 5px;*/
+/*    !*float: left;*!*/
+/*    width: 10%;*/
+/*}*/
+
+/*.write {*/
+/*    width: 20%;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.write label {*/
+/*    float: top;*/
+/*    width: 10%;*/
+/*    vertical-align: middle;*/
+/*}*/
+
+/*.write textarea {*/
+/*    margin: 10px 0;*/
+/*    width: 50%;*/
+/*    height: 100px;*/
+/*}*/
